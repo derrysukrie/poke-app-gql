@@ -1,9 +1,25 @@
 /* eslint-disable no-undef */
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
-  extends: ['airbnb-typescript', 'prettier'],
+  extends: ['airbnb-typescript', 'plugin:import/typescript'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'], // Your TypeScript files extension
+      parserOptions: {
+        project: ['./tsconfig.json'], // Specify it only for TypeScript files
+      },
+    },
+  ],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
+  },
+  parser: '@typescript-eslint/parser',
   rules: {
     'no-underscore-dangle': 0,
     'no-unused-vars': 'off',
@@ -21,9 +37,9 @@ module.exports = {
     'react/no-danger': 0,
     'react/prop-types': 0,
     'import/prefer-default-export': 'off',
-    'eqeqeq': 'off',
+    eqeqeq: 'off',
     'no-use-before-define': 'off',
-    'camelcase': 0,
+    camelcase: 0,
     'import/no-extraneous-dependencies': [
       'error',
       {

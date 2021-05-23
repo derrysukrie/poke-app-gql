@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "baseUrl": "src",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "src",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -19,9 +19,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "experimentalDecorators":true,
+    "useDefineForClassFields": true
   },
   "include": [
     "src"
-  ],
+  ]
 }

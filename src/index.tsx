@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloProvider } from '@apollo/client/react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // Apollo setup
-import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { ApolloProvider } from '@apollo/client/react';
 
 const client = new ApolloClient({
   uri: 'https://graphql-pokeapi.vercel.app/api/graphql',
@@ -19,7 +19,7 @@ ReactDOM.render(
       <App />
     </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
