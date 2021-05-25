@@ -1,5 +1,7 @@
+import Container from 'styled/container';
+
 function Homepage() {
-  return <div>awdwa</div>;
+  return <Container>awdaw</Container>;
 }
 
 export default Homepage;
