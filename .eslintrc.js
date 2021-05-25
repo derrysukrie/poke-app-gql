@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 module.exports = {
   root: true,
   plugins: ['@typescript-eslint'],
@@ -37,9 +36,9 @@ module.exports = {
     'react/no-danger': 0,
     'react/prop-types': 0,
     'import/prefer-default-export': 'off',
-    eqeqeq: 'off',
+    'eqeqeq': 'off',
     'no-use-before-define': 'off',
-    camelcase: 0,
+    'camelcase': 0,
     'import/no-extraneous-dependencies': [
       'error',
       {
