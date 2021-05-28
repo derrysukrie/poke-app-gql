@@ -8,3 +8,5 @@ type CardProps = {
 function Card(props: CardProps) {
   return <CardStyled>{props.children}</CardStyled>;
 }
+
+export default Card;

@@ -21,6 +21,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   rules: {
     'no-underscore-dangle': 0,
+    'implicit-arrow-linebreak': ["error", "beside"],
     'no-unused-vars': 'off',
     'linebreak-style': 0,
     'react/react-in-jsx-scope': 'off',

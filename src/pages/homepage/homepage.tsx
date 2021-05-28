@@ -1,10 +1,12 @@
 import { gql, useQuery } from '@apollo/client';
+import pokemonListTransformers from 'transformers/pokemon-list.transformers';
 
 import Container from 'styled/container';
 import Heading from 'styled/typhography/heading';
 import Flex from 'styled/flex';
 import Padded from 'styled/padded';
 import Text from 'styled/typhography/text';
+import PokemonList from './_components/pokemon-list/pokemon-list';
 
 function Homepage() {
   const GET_POKEMONS = gql`
@@ -35,7 +37,7 @@ function Homepage() {
 
   if (loading) return null;
 
-  console.log(data.pokemons.results);
+  console.log(data?.pokemons.results);
   return (
     <Container>
       <Flex justify="space-between">
@@ -47,6 +49,13 @@ function Homepage() {
           <Text size={14}>Poke List</Text>
           <Heading>awdaw</Heading>
         </Flex>
+      </Padded>
+      <Padded>
+        {(data?.pokemons.results ?? []).map((pokemon: {}) => (
+          <div>
+            <PokemonList detail={pokemonListTransformers(pokemon)} />
+          </div>
+        ))}
       </Padded>
     </Container>
   );
