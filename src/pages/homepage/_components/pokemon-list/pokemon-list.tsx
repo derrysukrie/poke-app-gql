@@ -9,7 +9,6 @@ type PokemonProps = {
 };
 
 function PokemonList(props: PokemonProps) {
-  console.log(props.detail);
   return (
     <div>
       <Card>

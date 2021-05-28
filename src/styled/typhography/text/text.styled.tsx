@@ -23,6 +23,7 @@ const StyledText = styled.div<{
   margin-left: ${(props) => (props.marginLeft ? props.marginLeft : 'unset;')};
   font-style: ${(props) => (props.fontStyle ? props.fontStyle : null)};
   cursor: ${(props) => (props.cursor && props.cursor)};
+  text-transform: uppercase;
 `;
 
 export { StyledText };

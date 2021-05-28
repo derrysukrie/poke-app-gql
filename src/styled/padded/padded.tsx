@@ -25,7 +25,7 @@ const Padded = (props: PaddedProps) => (
 );
 
 Padded.defaultProps = {
-  children: 'This is chidlren default string',
+  children: '',
   top: '0',
   bottom: '0',
   left: '0',

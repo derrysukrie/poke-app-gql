@@ -12,8 +12,10 @@ const route = (path: string, components: React.ReactNode): routeType => ({ path,
  */
 
 const Homepage = React.lazy(() => import('pages/homepage'));
+const PokemonDetailPage = React.lazy(() => import('pages/pokemon-detail'));
 
 const routes: routeType[] = [
+  route('/detail', <PokemonDetailPage />),
   route('/', <Homepage />),
 ];
 

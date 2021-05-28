@@ -35,9 +35,8 @@ function Homepage() {
     variables: gqlVariables,
   });
 
-  if (loading) return null;
+  if (loading) return null; // Change this later
 
-  console.log(data?.pokemons.results);
   return (
     <Container>
       <Flex justify="space-between">

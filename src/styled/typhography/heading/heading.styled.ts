@@ -19,6 +19,7 @@ const StyledHeading = styled.div<{
   text-align: ${(props) => (props.align ? props.align : null)};
   margin-top: ${(props) => props.marginTop && props.marginTop};
   margin-bottom: ${(props) => props.marginBottom && props.marginBottom};
+  text-transform: capitalize;
 `;
 
 export { StyledHeading };

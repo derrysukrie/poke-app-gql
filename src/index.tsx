@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 import './index.css';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { ApolloProvider } from '@apollo/client/react';
 import App from './App';
+import './App.css';
 import reportWebVitals from './reportWebVitals';
+
+Modal.setAppElement('#root');
 
 // Apollo setup
 
