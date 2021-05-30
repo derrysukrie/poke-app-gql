@@ -1,16 +1,25 @@
 import pokemonListTransformers from 'transformers/pokemon-list.transformers';
+import { useHistory } from 'react-router-dom';
 
 import Card from 'styled/card';
 import Flex from 'styled/flex';
 import Text from 'styled/typhography/text';
+import Padded from 'styled/padded';
+import Button from 'styled/buttons';
 
 type PokemonProps = {
   detail: ReturnType<typeof pokemonListTransformers>;
 };
 
 function PokemonList(props: PokemonProps) {
+  const history = useHistory();
+
+  const toDetailPokemonHandler = (pokemonName: string) => {
+    history.push(`/detail?pokemon=${pokemonName}`);
+  };
+
   return (
-    <div>
+    <Padded bottom="20px">
       <Card>
         <Flex justify="space-between" align="center">
           <div>
@@ -20,11 +29,16 @@ function PokemonList(props: PokemonProps) {
             {props.detail.name}
           </Text>
           <div>
-            <button type="button">awdaw</button>
+            <Button
+              onClick={() => toDetailPokemonHandler(props.detail.name)}
+              height="20px"
+            >
+              Detail
+            </Button>
           </div>
         </Flex>
       </Card>
-    </div>
+    </Padded>
   );
 }
 

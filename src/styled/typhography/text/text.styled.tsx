@@ -13,6 +13,7 @@ const StyledText = styled.div<{
   cursor?: string;
   fontStyle? :string;
 }>`
+  color: ${(props) => (props.customColor ? props.customColor : '#000')};
   font-size: ${(props) => (props.size ? `${props.size}px` : '12px')};
   font-weight: ${(props) => (props.weight ? props.weight : 'normal')};
   display: ${(props) => (props.block ? 'block' : 'inline-block')};
@@ -23,7 +24,7 @@ const StyledText = styled.div<{
   margin-left: ${(props) => (props.marginLeft ? props.marginLeft : 'unset;')};
   font-style: ${(props) => (props.fontStyle ? props.fontStyle : null)};
   cursor: ${(props) => (props.cursor && props.cursor)};
-  text-transform: uppercase;
+  text-transform: capitalize;
 `;
 
 export { StyledText };
